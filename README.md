@@ -1,13 +1,6 @@
 # Intigral-ott-API_Test
 Assignment Test
 
-Table of Content
-•	Description
-•	Architecture
-•	Prerequisite
-•	Run-Command
-•	Report
-
 Description
 This project contains Inteigral-ott.net popcorn API verification and validation Test Cases.
 Architecture
