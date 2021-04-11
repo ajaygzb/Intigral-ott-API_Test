@@ -23,7 +23,7 @@ mvn clean install -Denv=PreProd -Dsuite=PopcornAPI -DthreadCount=2
 Report
 
 The framework will generate 2 test reports
-1.	TestNG Extent Report
+1. Extent Report
 Path : project.dir/reports/Intigral-ott-popcorn-report.html
 
 2.	TestNG default Report
