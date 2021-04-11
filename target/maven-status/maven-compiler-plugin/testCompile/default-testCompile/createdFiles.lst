@@ -1,0 +1,3 @@
+com\intigral\ott\popcorn\testcases\IntigralOttPopCornPromotions.class
+com\intigral\ott\popcorn\testcases\IntigralOttPopcornPromotionsAPIErrorHandling.class
+com\intigral\ott\popcorn\api\BaseTest.class

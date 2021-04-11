@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Test Suite">
+    <listeners>
+        <listener class-name="com.intigral.ott.popcorn.utils.ReportListener"></listener>
+    </listeners>
+    <test name="API Testing">
+        <classes>
+              <class name="com.intigral.ott.popcorn.testcases.IntigralOttPopCornPromotions">
+              </class>
+            <class name="com.intigral.ott.popcorn.testcases.IntigralOttPopcornPromotionsAPIErrorHandling">
+            </class>
+        </classes>
+    </test>
+</suite>

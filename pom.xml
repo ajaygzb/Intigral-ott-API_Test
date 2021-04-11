@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.Integral-Ott</groupId>
+    <artifactId>Intigral-ott-Popcorn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <developers>
+        <developer>
+            <name>Ajay Kumar</name>
+            <email>ajaygzb10@gmail.com</email>
+        </developer>
+    </developers>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <!--jars dependency version-->
+        <rest-assured.version>4.3.3</rest-assured.version>
+        <Testng.version>7.3.0</Testng.version>
+        <json-path.version>4.3.3</json-path.version>
+        <json.version>20201115</json.version>
+        <json-schema.version>4.3.3</json-schema.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <avenstack.version>5.0.6</avenstack.version>
+
+        <!--Plugins dependency version-->
+        <maven-surfire.version>2.18.1</maven-surfire.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${Testng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${json-path.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${json-schema.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${avenstack.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${json.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surfire.version}</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <suiteXmlFile>src/test/resources/${suite}.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                        <properties>
+                            <property>
+                                <name>parallel</name>
+                                <value>methods</value>
+                            </property>
+                            <property>
+                                <name>threadCount</name>
+                                <!--suppress UnresolvedMavenProperty -->
+                                <value>${threadCount}</value>
+                            </property>
+                        </properties>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
